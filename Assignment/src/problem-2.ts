@@ -1,16 +1,20 @@
 {
-    // a new array with duplicates removed
+  // a new array with duplicates removed
 
+  const removeDuplicates = (numbers: number[]): number[] => {
+    const uniqueElements: number[] = [];
 
-    const removeDuplicates = (numbers: number[]): number[]=>{
-          return [...new Set(numbers)];
+    for (const num of numbers) {
+      if (uniqueElements.indexOf(num) === -1) {
+        uniqueElements.push(num);
+      }
     }
 
-    const result22 = removeDuplicates([1, 2, 2, 3, 4, 4, 5]);
-    console.log(result22);
+    return uniqueElements;
+  };
 
+  const result = removeDuplicates([1, 2, 2, 3, 4, 4, 5]);
+  console.log(result);
 
-
-    // 
-
+  //
 }
